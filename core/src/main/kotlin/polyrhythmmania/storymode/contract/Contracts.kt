@@ -171,7 +171,9 @@ object Contracts {
         add(Contract("tap_trial_2_superhard", Requester.ANIMAL_ACROBATICS, JingleType.GBA, Attribution(SongInfo.tengoku("Tap Trial 2"), listOf("Kievit", "Conn")), 0, extraConditions = listOf(Condition.TempoUp(110), Condition.MonsterGoal), skipAfterNFailures = NOT_ALLOWED_TO_SKIP) { main ->
             StoryGameModeFromFile(main, Gdx.files.internal("story/levels/superhard/tap_trial_2.prmproj"), percentSpeed = 110)
         })
-
+        add(Contract("catchy_tune", Requester.GOOD_SPORTS, JingleType.GBA, Attribution(SongInfo.megamix("Catchy Tune"), listOf("Kievit")), 60, listOf(Condition.DefectiveRods(2))) { main ->
+            StoryGameModeFromFile(main, Gdx.files.internal("story/levels/catchy_tune.prmproj"))
+        })
         
         // Debug contracts
         add(Contract("air_rally_one_life", Requester.DEBUG, JingleType.GBA, contracts["air_rally"]?.attribution, 0, listOf(Condition.Lives(1))) { main ->
